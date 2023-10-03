@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import './CreditCardForm.scss'
-import { DataContext } from '../../pages/Homepage'
+import { DataContext } from '../../context/DataContext'
 
 export default function CreditCardForm() {
   const [CreditCardValue, setCreditCardValue] = useContext(DataContext)

@@ -1,21 +1,13 @@
 import React from 'react'
 import './Homepage.scss'
-import { createContext, useContext, useState } from 'react';
 import CreditCardForm from '../component/CreditCardForm/CreditCardForm'
 import CreditCard from '../component/CreditCard/CreditCard'
-
-export const DataContext = React.createContext();
+import DataContextProvider from '../context/DataContext';
 
 export default function Homepage() {
-  const [CreditCardValue, setCreditCardValue] = useState({
-    cardHolderName : 'RASHIKA SAHU',
-    cardNumber : '0000 0000 0000 0000',
-    expMonth : '12',
-    expYear : '23',
-    cvv : '111'
-  })
+  
   return (
-      <DataContext.Provider value={[CreditCardValue, setCreditCardValue]}>
+      <DataContextProvider>
         <div className="homepage">
           <div className="left-container">
             <CreditCard/>
@@ -24,7 +16,7 @@ export default function Homepage() {
             <CreditCardForm/>  
           </div>
       </div>
-    </DataContext.Provider>
+    </DataContextProvider>
     
     
   )
