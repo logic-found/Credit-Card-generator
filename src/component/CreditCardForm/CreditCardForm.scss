@@ -1,0 +1,115 @@
+.credit-card-form-div{
+    width: 35vw;
+    height: fit-content;
+    color:#444;
+    padding: 3vh;
+    box-sizing: border-box;
+    position: absolute;
+    right:15vw;
+    
+}
+.credit-card-label{
+    font-size: 1.1em;
+    font-weight: 600;
+
+}
+
+.credit-card-input-field{
+    width: 100%;
+    color: rgb(90, 89, 89);
+    font-size: 0.8em;
+    padding: 1vh;
+    border: 1px solid #d7d1d1;
+    border-radius: 2px;
+    font-family: 'Varela Round', sans-serif;
+    box-sizing: border-box;
+    
+    
+}
+.cvv{
+    width: 50%;
+}
+.expDate-and-cvv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.form-field-expMonth-and-year{
+    display: flex;
+    margin-bottom: 1vh
+    
+}
+.expDate-input-field, .cvv-input-field{
+    @extend .credit-card-input-field;
+    
+}
+
+.expDate-input-field{
+    width:7vw;
+    margin-right: 1vw;
+    box-sizing: border-box;
+}
+.cvv-input-field{
+    width:100%;
+    box-sizing: border-box;
+}
+
+.submit-form{
+    width:100%;
+    color: #fff;
+    background-color: black;
+    padding: 1vh 0;
+    margin-top: 4vh ;
+    border-radius: 5px;
+    letter-spacing: 0.2vh;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+
+.input-error{
+    font-size: x-small;
+    color: red;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+
+
+@media (max-width: 1050px) {
+    
+    .expDate-and-cvv{
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 700px) {
+    
+    .credit-card-form-div{
+        right: 10vw;
+    }
+    .credit-card-input-field{
+        font-size: 0.5em
+    }
+    .credit-card-label{
+        font-size: 0.9em;
+    }
+    .submit-form{
+        font-size: 0.9em;
+    }
+    
+}
+
+@media (max-width: 550px) {
+    
+    .credit-card-form-div{
+        right: 7vw;
+    }
+    
+    
+}
+
