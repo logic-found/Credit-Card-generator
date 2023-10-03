@@ -9,7 +9,7 @@ export const DataContext = React.createContext();
 export default function Homepage() {
   const [CreditCardValue, setCreditCardValue] = useState({
     cardHolderName : 'RASHIKA SAHU',
-    cardNumber : '1111 1111 1111 1111',
+    cardNumber : '0000 0000 0000 0000',
     expMonth : '12',
     expYear : '23',
     cvv : '111'

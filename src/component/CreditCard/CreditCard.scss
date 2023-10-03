@@ -1,3 +1,5 @@
+
+
 .credit-card{
     position: relative;
     height: 100%;
@@ -5,7 +7,7 @@
 
 }
 .credit-card-front{
-    height: 35vh;
+    height: 34vh;
     width: 25vw;
     max-width: 50vw;
     max-height: 45vh;
@@ -14,7 +16,7 @@
     border-radius: 10px;
     box-sizing: border-box;
     position: absolute;
-    top:10%;
+    top:10vh;
     right:-50px;
     
 }
@@ -56,7 +58,7 @@
 
 .credit-card-back{
     @extend .credit-card-front;
-    top:55%;
+    top:55vh;
     right:-80px;
     background: rgb(230, 225, 225);
     display: flex;
@@ -79,16 +81,98 @@
     padding: 1vh;
     color: #fff;
     background-color:rgb(154, 153, 153) ;
-    border-radius: 3px;
+    border-radius: 5px;
     letter-spacing: 0.2vh;
 }
 
 .credit-card-back-end{
     height:30%;
     width: 100%;
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .first, .second, .third{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        margin-top: 1.5vh;
+        
+    
+    }
+    .one, .two, .three, .four{
+        border:2px solid #AEB5BD;
+        border-radius: 5px;
+    }
+
+
+    .first{
+        
+        .one{
+            width:4em;
+            
+        }
+        .two{
+            width:1em;
+            
+        }
+        .three{
+            width:0.5em;
+            
+        }
+        .four{
+            width:0.9em;
+            
+        }
+    }
+
+    .second{
+
+        .one{
+            width:1.5em;
+            
+        }
+        .two{
+            width:0.4em;
+            
+        }
+        .three{
+            width:3.5em;
+            
+        }
+        .four{
+            width:1em;
+            
+        }
+    }
+    .third{
+
+        .one{
+            width:1.5em;
+            
+        }
+        .two{
+            width:4em;
+            
+        }
+        .three{
+            width:0.7em;
+            
+        }
+        .four{
+            width:0.5em;
+            
+        }
+    }
+
 }
 
+
+
+
+// -------------------------------------------------------------- MEDIA QUERIES -------------------------------------------------------------------------------
 
 
 @media (max-width: 1200px) {

@@ -29,7 +29,26 @@ export default function CreditCard() {
       <div className="credit-card-back">
         <div className="credit-card-back-black-div"></div>
         <div className="credit-card-back-cvv">{CreditCardValue.cvv}</div>
-        <div className="credit-card-back-end"></div>
+        <div className="credit-card-back-end">
+          <div className="first">
+            <div className="one"></div>
+            <div className="two"></div>
+            <div className="three"></div>
+            <div className="four"></div>
+          </div>
+          <div className="second">
+            <div className="one"></div>
+            <div className="two"></div>
+            <div className="three"></div>
+            <div className="four"></div>
+          </div>
+          <div className="third">
+            <div className="one"></div>
+            <div className="two"></div>
+            <div className="three"></div>
+            <div className="four"></div>
+          </div>
+        </div>
       </div>
     </div>
   );
