@@ -69,6 +69,13 @@ export default function CreditCardForm() {
       }))
       validate=false
     }
+    else if(inputValue.cardHolderName.length>20){
+      setInputError(prevState => ({
+        ...prevState,
+        cardHolderName: 'Crad holder name should be less than 20 alphabets'
+      }))
+      validate=false
+    }
     else{
       setInputError(prevState => ({
         ...prevState,
@@ -76,10 +83,17 @@ export default function CreditCardForm() {
       }))
     }
 
-    if(isNaN(inputValue.cardNumber) || inputValue.cardNumber.length!==12){
+    if(isNaN(inputValue.cardNumber)){
       setInputError(prevState => ({
         ...prevState,
         cardNumber: 'Enter correct card number'
+      }))
+      validate=false
+    }
+    else if(inputValue.cardNumber.length!=16){
+      setInputError(prevState => ({
+        ...prevState,
+        cardNumber: 'Card Number must contain 16 digits'
       }))
       validate=false
     }
@@ -183,8 +197,8 @@ export default function CreditCardForm() {
 
 function addSpaceAfterEvery4thChar(string) {
   let result = "";
-  for (let i = 0; i < 12; i++) {
-    if (i % 4 === 0 && i !== 0) {
+  for (let i = 0; i < 16; i++) {
+    if (i % 4 === 0 && i !== 0 & i!==15) {
       result += " ";
     }
     result += string[i];
