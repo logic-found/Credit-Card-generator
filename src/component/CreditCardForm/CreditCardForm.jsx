@@ -147,8 +147,7 @@ export default function CreditCardForm() {
       
       validate=false
     }
-    else{
-    if(inputValue.cvv.length!==3){
+    else if(inputValue.cvv.length!==3){
       setInputError(prevState => ({
         ...prevState,
         cvv: 'CVV must have 3 digits'
