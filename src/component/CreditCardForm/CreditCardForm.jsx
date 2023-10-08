@@ -65,14 +65,14 @@ export default function CreditCardForm() {
     if(!isNaN(inputValue.cardHolderName)){
       setInputError(prevState => ({
         ...prevState,
-        cardHolderName: 'Enter correct name'
+        cardHolderName: 'Card holder name must not include digits'
       }))
       validate=false
     }
     else if(inputValue.cardHolderName.length>20){
       setInputError(prevState => ({
         ...prevState,
-        cardHolderName: 'Crad holder name should be less than 20 alphabets'
+        cardHolderName: 'Name should be less than 20 alphabets'
       }))
       validate=false
     }
@@ -86,14 +86,14 @@ export default function CreditCardForm() {
     if(isNaN(inputValue.cardNumber)){
       setInputError(prevState => ({
         ...prevState,
-        cardNumber: 'Enter correct card number'
+        cardNumber: 'Card Number must only include digits'
       }))
       validate=false
     }
     else if(inputValue.cardNumber.length!=16){
       setInputError(prevState => ({
         ...prevState,
-        cardNumber: 'Card Number must contain 16 digits'
+        cardNumber: 'Card Number must contain only 16 digits'
       }))
       validate=false
     }
@@ -104,10 +104,17 @@ export default function CreditCardForm() {
       }))
     }
 
-    if(isNaN(inputValue.expMonth) || Number(inputValue.expMonth)>12 || Number(inputValue.expMonth)===0){
+    if(isNaN(inputValue.expMonth)){
       setInputError(prevState => ({
         ...prevState,
         expMonth: 'Enter correct month'
+      }))
+      validate=false
+    }
+    if(isNaN(Number(inputValue.expMonth))>12 || Number(inputValue.expMonth)===0){
+      setInputError(prevState => ({
+        ...prevState,
+        expMonth: 'Month should be between 1 to 12'
       }))
       validate=false
     }
@@ -132,10 +139,19 @@ export default function CreditCardForm() {
       }))
     }
 
-    if(isNaN(inputValue.cvv) || inputValue.cvv.length!==3){
+    if(isNaN(inputValue.cvv)){
       setInputError(prevState => ({
         ...prevState,
-        cvv: 'Enter correct CVV'
+        cvv: 'CVV must only include digits'
+      }))
+      
+      validate=false
+    }
+    else{
+    if(inputValue.cvv.length!==3){
+      setInputError(prevState => ({
+        ...prevState,
+        cvv: 'CVV must have 3 digits'
       }))
       
       validate=false
